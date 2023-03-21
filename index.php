@@ -14,4 +14,4 @@
 //    echo '<h1>বর্তমান তারিখ এবং সময়: '. $bng_date->get_date() .'</h1>';
 
     $bng_date = new EnglishToBanglaDate();
-    echo '<h1>বর্তমান তারিখ এবং সময়: '. $bng_date->getSimpleDate(CURRENT_DATETIME) .'</h1>';
+    echo '<h1>বর্তমান তারিখ এবং সময়: '. $bng_date->banglaDate(CURRENT_DATETIME) .'</h1>';
