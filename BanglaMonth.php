@@ -1,13 +1,13 @@
 <?php
 /*
- * BanglaDate - English to Bangla date converter
- * @package BanglaDate
+ * BanglaMonth - English to Bangla date converter
+ * @package BanglaMonth
  * @author MsM Robin
  * @link http://robin.adovasoft.com
  * @copyright 2022 Tareq Hasan
  */
 
-class BanglaDate {
+class BanglaMonth {
 
     private $timestamp; //timestamp as input
     private $morning; //when the date will change?
@@ -33,7 +33,7 @@ class BanglaDate {
      */
 
     function __construct( $timestamp, $hour = 6 ) {
-        $this->BanglaDate( $timestamp, $hour );
+        $this->BanglaMonth( $timestamp, $hour );
     }
 
     /*
@@ -44,7 +44,7 @@ class BanglaDate {
      * @param int $timestamp
      * @param type $hour
      */
-    function BanglaDate( $timestamp, $hour = 6 ) {
+    function BanglaMonth( $timestamp, $hour = 6 ) {
         $this->engDate = date( 'd', $timestamp );
         $this->engMonth = date( 'm', $timestamp );
         $this->engYear = date( 'Y', $timestamp );
@@ -62,7 +62,7 @@ class BanglaDate {
     }
 
     function set_time( $timestamp, $hour = 6 ) {
-        $this->BanglaDate( $timestamp, $hour );
+        $this->BanglaMonth( $timestamp, $hour );
     }
 
     /**
