@@ -1,17 +1,16 @@
 <?php
     include  'BanglaMonth.php';
     include 'EnglishToBanglaDate.php';
+    date_default_timezone_set('Asia/Dhaka');
 
     defined("CURRENT_TIME") || define("CURRENT_TIME", date('H:i:s'));
     defined("CURRENT_DATE") || define("CURRENT_DATE", date('Y-m-d'));
     defined("CURRENT_DATETIME") || define("CURRENT_DATETIME", date('Y-m-d H:i:s'));
 
-    echo '<h1>Current Time: '. CURRENT_DATETIME .'</h1>';
+    echo '<h1>English to converted Bengali DateTime Example</h1><br><hr>';
 
-//    $bng_date = new BanglaMonth(strtotime(CURRENT_DATE), 6);
-//    print_r($bng_date->get_date());
-//
-//    echo '<h1>বর্তমান তারিখ এবং সময়: '. $bng_date->get_date() .'</h1>';
+    echo '<h2>Current Time: '. CURRENT_DATETIME .'</h2>';
+    echo '<h2>Formatted Time: '. date('h:i a jS F, Y', strtotime(CURRENT_DATETIME)) .'</h2>';
 
     $bng_date = new EnglishToBanglaDate();
-    echo '<h1>বর্তমান তারিখ এবং সময়: '. $bng_date->banglaDate(CURRENT_DATETIME) .'</h1>';
+    echo '<h2>বর্তমান তারিখ এবং সময়: '. $bng_date->banglaDate(CURRENT_DATETIME) .'</h2>';
